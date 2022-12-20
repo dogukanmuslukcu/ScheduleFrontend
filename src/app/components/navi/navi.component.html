@@ -1,0 +1,60 @@
+ <div class="container">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container navbar-class navbar-light">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIi5mtcpzR_zYaPABub2-uuXwBou3FPESQsp9CgArI6eboUoaCQQWR-DskBEf8uq3d-k&usqp=CAU"
+        alt=""
+        width="100"
+        height="100"
+        class="d-inline-block align-text-top rounded-circle"
+      />
+
+      <a class="navbar-brand" routerLink="meetingCreate">Toplantı Oluştur</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink=""
+              >AnaSayfa</a
+            >
+          </li>
+        </ul>
+        <nav *ngIf="!isAuthenticated()">
+          <button
+            routerLink="/login"
+            class="btn btn-sm btn-outline-secondary"
+            type="button"
+            id="loginButton"
+          >
+            Giriş Yap
+          </button>
+          &nbsp;
+          <button routerLink="/register" type="button" id="registerButton">
+            Kayıt Ol
+          </button>
+        </nav>
+        
+        <div *ngIf="isAuthenticated()" class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    {{userName}}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" routerLink="/user">Hesabım</a></li>
+    <li><a class="dropdown-item" (click)="logOut()">Çıkış Yap</a></li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </nav>
+<!-- /* */ -->

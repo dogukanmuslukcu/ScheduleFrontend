@@ -1,0 +1,47 @@
+<body class="text-center">
+    <main class="form-signin">
+      <form [formGroup]="meetingForm">
+        <img
+          class="mb-4"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIi5mtcpzR_zYaPABub2-uuXwBou3FPESQsp9CgArI6eboUoaCQQWR-DskBEf8uq3d-k&usqp=CAU"
+          alt=""
+          width="200"
+          height="200"
+          id="images"
+        />
+        <br>
+        <label for="meetingTime" class="mb-2">Toplantı zamanı</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control mb-2"
+            formControlName="meetingTime"
+            id="meetingTime"
+          />
+        </div>
+        <!-- <label for="HostUser" class="mb-2">Toplantıyı Oluşturan Kişi</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="HostUser"
+            id="HostUser"
+          />
+        </div> -->
+        <label for="MeetingPlace" class="mb-2">Toplantı Yeri</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="MeetingPlace"
+            id="MeetingPlace"
+          />
+        </div>
+        
+        <button class="w-100 btn btn-lg btn-primary mt-4" (click)="meeting()">
+          Toplantı Oluştur
+        </button>
+      </form>
+    </main>
+  </body>
+  

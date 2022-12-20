@@ -1,0 +1,20 @@
+<div class="card mb-3" style="max-width: 1000px">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="https://www.shutterstock.com/shutterstock/photos/1040084344/display_1500/stock-vector-man-icon-vector-1040084344.jpg"
+        class="img-fluid rounded-start"
+        alt="..."
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body" *ngFor="let user of users">
+        <h5 class="card-title">Kullanıcı Bilgisi</h5>
+        <p class="card-text">{{ user.firstName }}</p>
+        <p class="card-text">{{ user.lastName }}</p>
+        <p class="card-text">{{ user.email }}</p>
+        <a routerLink="/user/update" class="btn btn-primary">Güncelle</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.container {
+  background-color: rgb(250, 245, 239);
+  border-radius: 5px;
+}
+button {
+  font-size: 15px;
+}
+#loginButton {
+  color: #095d48;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(250, 245, 239);
+}
+
+#registerButton {
+  margin-right: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #095d48;
+  color: aliceblue;
+}

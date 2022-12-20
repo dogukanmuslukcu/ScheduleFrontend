@@ -1,0 +1,39 @@
+<body class="text-center">
+  <main class="form-signin">
+    <form [formGroup]="loginForm">
+      <img
+        id="images"
+        class="mb-4"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIi5mtcpzR_zYaPABub2-uuXwBou3FPESQsp9CgArI6eboUoaCQQWR-DskBEf8uq3d-k&usqp=CAU"
+        alt=""
+        width="200"
+        height="200"
+      />
+      <h1 class="h3 mb-3 fw-normal">Giriş Yapınız</h1>
+
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          id="email"
+          placeholder="name@example.com"
+        />
+        <label for="floatingInput">E-mail</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          id="password"
+          placeholder="Password"
+        />
+        <label for="floatingPassword">Parola</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" (click)="login()">
+        Giriş
+      </button>
+    </form>
+  </main>
+</body>
