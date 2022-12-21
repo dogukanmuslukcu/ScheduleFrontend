@@ -1,6 +1,6 @@
 export interface DecodedToken{
   Token: string | null;
-  DecodedToken:string;
+  DecodedToken:string | null;
   Expiration: number;
   Name: string;
   Role: string;
