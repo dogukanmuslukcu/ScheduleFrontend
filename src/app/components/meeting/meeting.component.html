@@ -10,34 +10,111 @@
           id="images"
         />
         <br>
-        <label for="meetingTime" class="mb-2">Toplantı zamanı</label>
+        <label for="MeetingName" class="mb-2">Toplantı İsmi</label>
         <div class="form-floating mb-2">
           <input
             type="text"
             class="form-control mb-2"
-            formControlName="meetingTime"
-            id="meetingTime"
+            formControlName="MeetingName"
+            id="MeetingName"
           />
         </div>
-         <label for="HostUser" class="mb-2">Toplantıyı Oluşturan Kişi</label>
+
+         <label for="FirstVoteTime" class="mb-2">Toplantı 1 zaman</label>
         <div class="form-floating mb-2">
           <input
             type="text"
             class="form-control"
-            formControlName="HostUser"
-            id="HostUser"
+            formControlName="FirstVoteTime"
+            id="FirstVoteTime"
           />
         </div> 
-        <label for="MeetingPlace" class="mb-2">Toplantı Yeri</label>
+        <label for="FirstVotePlace" class="mb-2">Toplantı 1 Yeri</label>
         <div class="form-floating mb-2">
           <input
             type="text"
             class="form-control"
-            formControlName="MeetingPlace"
-            id="MeetingPlace"
+            formControlName="FirstVotePlace"
+            id="FirstVotePlace"
           />
         </div>
-        
+
+        <label for="SecondVoteTime" class="mb-2">Toplantı 2 zaman</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="SecondVoteTime"
+            id="SecondVoteTime"
+          />
+        </div> 
+        <label for="SecondVotePlace" class="mb-2">Toplantı 2 Yeri</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="SecondVotePlace"
+            id="SecondVotePlace"
+          />
+        </div>
+
+        <label for="ThirdVoteTime" class="mb-2">Toplantı 3 zaman</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="ThirdVoteTime"
+            id="ThirdVoteTime"
+          />
+        </div> 
+        <label for="ThirdVotePlace" class="mb-2">Toplantı 3 Yeri</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="ThirdVotePlace"
+            id="ThirdVotePlace"
+          />
+        </div>
+
+        <label for="FourthVoteTime" class="mb-2">Toplantı 4 zaman</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="FourthVoteTime"
+            id="FourthVoteTime"
+          />
+        </div> 
+        <label for="FourthVotePlace" class="mb-2">Toplantı 4 Yeri</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="FourthVotePlace"
+            id="FourthVotePlace"
+          />
+        </div>
+
+        <label for="FifthVoteTime" class="mb-2">Toplantı 5 zaman</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="FifthVoteTime"
+            id="FifthVoteTime"
+          />
+        </div> 
+        <label for="FifthVotePlace" class="mb-2">Toplantı 5 Yeri</label>
+        <div class="form-floating mb-2">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="FifthVotePlace"
+            id="FifthVotePlace"
+          />
+        </div>
+
         <button class="w-100 btn btn-lg btn-primary mt-4" (click)="meeting()">
           Toplantı Oluştur
         </button>
