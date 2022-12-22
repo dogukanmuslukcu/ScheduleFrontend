@@ -1,124 +1,148 @@
 <body class="text-center">
-    <main class="form-signin">
-      <form [formGroup]="meetingForm">
-        <img
-          class="mb-4"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIi5mtcpzR_zYaPABub2-uuXwBou3FPESQsp9CgArI6eboUoaCQQWR-DskBEf8uq3d-k&usqp=CAU"
-          alt=""
-          width="200"
-          height="200"
-          id="images"
-        />
-        <br>
-        <label for="MeetingName" class="mb-2">Toplantı İsmi</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control mb-2"
-            formControlName="MeetingName"
-            id="MeetingName"
-          />
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <main class="form-signin">
+          <form [formGroup]="meetingForm">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <img
+                class="mb-3"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDIi5mtcpzR_zYaPABub2-uuXwBou3FPESQsp9CgArI6eboUoaCQQWR-DskBEf8uq3d-k&usqp=CAU"
+                alt=""
+                width="200"
+                height="200"
+                id="images"
+              />
+              <br />
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="MeetingName" class="mb-2 fs-4">Toplantı İsmi</label>
+              <div class="form-floating mb-2">
+                <input
+                  type="text"
+                  class="mb-2"
+                  formControlName="MeetingName"
+                  id="MeetingName"
+                />
+              </div>
+            </div>
 
-         <label for="FirstVoteTime" class="mb-2">Toplantı 1 zaman</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="FirstVoteTime"
-            id="FirstVoteTime"
-          />
-        </div> 
-        <label for="FirstVotePlace" class="mb-2">Toplantı 1 Yeri</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="FirstVotePlace"
-            id="FirstVotePlace"
-          />
-        </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="MeetingPlace" class="mb-2 fs-4">Toplantı Yeri</label>
+              <div class="form-floating mb-2">
+                <select
+                  class=""
+                  id="MeetingPlace"
+                  formControlName="MeetingPlace"
+                >
+                  <option selected>Open this select menu</option>
+                  <option value="1" class="text-center">Zoom</option>
+                  <option value="2" class="text-center">Discord</option>
+                  <option value="3" class="text-center">Google Meet</option>
+                  <option value="4" class="text-center">Microsoft Teams</option>
+                  <option value="5" class="text-center">GoToMeeting</option>
+                  <option value="6" class="text-center">Cisco Webex</option>
+                </select>
+              </div>
+            </div>
 
-        <label for="SecondVoteTime" class="mb-2">Toplantı 2 zaman</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="SecondVoteTime"
-            id="SecondVoteTime"
-          />
-        </div> 
-        <label for="SecondVotePlace" class="mb-2">Toplantı 2 Yeri</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="SecondVotePlace"
-            id="SecondVotePlace"
-          />
-        </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 mb-3 mt-5">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <label for="FirstVotePlace" class="mb-2 fs-5"
+                    >Toplantı 1</label
+                  >
+                  <div class="form-floating mb-2">
+                    <input
+                      type="datetime-local"
+                      class=""
+                      formControlName="FirstVotePlace"
+                      id="FirstVotePlace"
+                    />
+                  </div>
+                </div>
 
-        <label for="ThirdVoteTime" class="mb-2">Toplantı 3 zaman</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="ThirdVoteTime"
-            id="ThirdVoteTime"
-          />
-        </div> 
-        <label for="ThirdVotePlace" class="mb-2">Toplantı 3 Yeri</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="ThirdVotePlace"
-            id="ThirdVotePlace"
-          />
-        </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <label for="SecondVotePlace" class="mb-2 fs-5"
+                    >Toplantı 2
+                  </label>
+                  <div class="form-floating mb-2">
+                    <input
+                      type="datetime-local"
+                      class=""
+                      formControlName="SecondVotePlace"
+                      id="SecondVotePlace"
+                    />
+                  </div>
+                </div>
 
-        <label for="FourthVoteTime" class="mb-2">Toplantı 4 zaman</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="FourthVoteTime"
-            id="FourthVoteTime"
-          />
-        </div> 
-        <label for="FourthVotePlace" class="mb-2">Toplantı 4 Yeri</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="FourthVotePlace"
-            id="FourthVotePlace"
-          />
-        </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <label for="ThirdVotePlace" class="mb-2 fs-5"
+                    >Toplantı 3
+                  </label>
+                  <div class="form-floating mb-2">
+                    <input
+                      type="datetime-local"
+                      class=""
+                      formControlName="ThirdVotePlace"
+                      id="ThirdVotePlace"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-4 mt-2">
+                  <label for="FourthVotePlace" class="mb-2 fs-5"
+                    >Toplantı 4</label
+                  >
+                  <div class="form-floating mb-2">
+                    <input
+                      type="datetime-local"
+                      class=""
+                      formControlName="FourthVotePlace"
+                      id="FourthVotePlace"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mt-2">
+                  <label for="FifthVotePlace" class="mb-2 fs-5"
+                    >Toplantı 5
+                  </label>
+                  <div class="form-floating mb-2">
+                    <input
+                      type="datetime-local"
+                      class=""
+                      formControlName="FifthVotePlace"
+                      id="FifthVotePlace"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <label for="FifthVoteTime" class="mb-2">Toplantı 5 zaman</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="FifthVoteTime"
-            id="FifthVoteTime"
-          />
-        </div> 
-        <label for="FifthVotePlace" class="mb-2">Toplantı 5 Yeri</label>
-        <div class="form-floating mb-2">
-          <input
-            type="text"
-            class="form-control"
-            formControlName="FifthVotePlace"
-            id="FifthVotePlace"
-          />
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary mt-4" (click)="meeting()">
-          Toplantı Oluştur
-        </button>
-      </form>
-    </main>
-  </body>
-  
+            <div class="input-group mb-3 justify-content-center mt-3">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Toplantı Açıklaması</span
+              >
+              <input
+                type="text"
+                class="w-50"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-outline-success btn-lg mt-5"
+              (click)="meeting()"
+            >
+              Toplantı Oluştur
+            </button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>

@@ -19,4 +19,14 @@ button {
   border-radius: 50px;
   background-color: #095d48;
   color: aliceblue;
+  transition: 300ms all;
+}
+#registerButton:hover {
+  background-color: rgba(11, 94, 72, 0.4);
+  color: black;
+}
+
+a {
+  font-size: 15px;
+  color: #095d48;
 }

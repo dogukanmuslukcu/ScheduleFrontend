@@ -27,42 +27,24 @@ export class MeetingComponent implements OnInit {
    
   }
 
-  /*
-  MeetingName: string;
-  HostUser: string;
-
-  FirstVoteTime: string;
-  FirstVotePlace: string;
-
-  SecondVoteTime: string;
-  SecondVotePlace: string;
-
-  ThirdVoteTime: string;
-  ThirdVotePlace: string;
-
-  FourthVoteTime: string;
-  FourthVotePlace: string;
-
-  FifthVoteTime: string;
-  FifthVotePlace: string;*/ 
   createMeetingForm() {
     this.meetingForm = this.formBuilder.group({
       MeetingName: ["", Validators.required],
       HostUser: [this.userName],
 
-      FirstVoteTime: ["", Validators.required],
+      
       FirstVotePlace: ["", Validators.required],
 
-      SecondVoteTime: ["", Validators.required],
+      
       SecondVotePlace: ["", Validators.required],
 
-      ThirdVoteTime: ["", Validators.required],
+      
       ThirdVotePlace: ["", Validators.required],
       
-      FourthVoteTime: ["", Validators.required],
+      
       FourthVotePlace: ["", Validators.required],
       
-      FifthVoteTime: ["", Validators.required],
+     
       FifthVotePlace: ["", Validators.required]
     })
   }
