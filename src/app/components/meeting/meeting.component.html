@@ -30,62 +30,55 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <label for="MeetingPlace" class="mb-2 fs-4">Toplantı Yeri</label>
               <div class="form-floating mb-2">
-                <select
-                  class=""
-                  id="MeetingPlace"
+                <input
+                  type="text"
+                  class="mb-2"
                   formControlName="MeetingPlace"
-                >
-                  <option selected>Open this select menu</option>
-                  <option value="1" class="text-center">Zoom</option>
-                  <option value="2" class="text-center">Discord</option>
-                  <option value="3" class="text-center">Google Meet</option>
-                  <option value="4" class="text-center">Microsoft Teams</option>
-                  <option value="5" class="text-center">GoToMeeting</option>
-                  <option value="6" class="text-center">Cisco Webex</option>
-                </select>
+                  id="MeetingPlace"
+                />
               </div>
             </div>
 
             <div class="col-sm-12 col-md-12 col-lg-12 mb-3 mt-5">
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
-                  <label for="FirstVotePlace" class="mb-2 fs-5"
+                  <label for="FirstVote" class="mb-2 fs-5"
                     >Toplantı 1</label
                   >
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
                       class=""
-                      formControlName="FirstVotePlace"
-                      id="FirstVotePlace"
+                      formControlName="FirstVote"
+                      id="FirstVote"
                     />
                   </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
-                  <label for="SecondVotePlace" class="mb-2 fs-5"
+                  <label for="SecondVote" class="mb-2 fs-5"
                     >Toplantı 2
                   </label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
                       class=""
-                      formControlName="SecondVotePlace"
-                      id="SecondVotePlace"
+                      formControlName="SecondVote"
+                      id="SecondVote"
                     />
                   </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
-                  <label for="ThirdVotePlace" class="mb-2 fs-5"
+                  <label for="ThirdVote" class="mb-2 fs-5"
                     >Toplantı 3
                   </label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
                       class=""
-                      formControlName="ThirdVotePlace"
-                      id="ThirdVotePlace"
+                      formControlName="ThirdVote"
+                      id="ThirdVote"
                     />
                   </div>
                 </div>
@@ -94,44 +87,43 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-6 col-lg-4 mt-2">
-                  <label for="FourthVotePlace" class="mb-2 fs-5"
+                  <label for="FourthVote" class="mb-2 fs-5"
                     >Toplantı 4</label
                   >
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
                       class=""
-                      formControlName="FourthVotePlace"
-                      id="FourthVotePlace"
+                      formControlName="FourthVote"
+                      id="FourthVote"
                     />
                   </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-4 mt-2">
-                  <label for="FifthVotePlace" class="mb-2 fs-5"
+                  <label for="FifthVote" class="mb-2 fs-5"
                     >Toplantı 5
                   </label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
                       class=""
-                      formControlName="FifthVotePlace"
-                      id="FifthVotePlace"
+                      formControlName="FifthVote"
+                      id="FifthVote"
                     />
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="input-group mb-3 justify-content-center mt-3">
-              <span class="input-group-text" id="inputGroup-sizing-default"
-                >Toplantı Açıklaması</span
-              >
-              <input
-                type="text"
-                class="w-50"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-              />
+           <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="MeetingDescription" class="mb-2 fs-4">Toplantı İsmi</label>
+              <div class="form-floating mb-2">
+                <input
+                  type="text"
+                  class="mb-2"
+                  formControlName="MeetingDescription"
+                  id="MeetingDescription"
+                />
+              </div>
             </div>
             <button
               type="button"

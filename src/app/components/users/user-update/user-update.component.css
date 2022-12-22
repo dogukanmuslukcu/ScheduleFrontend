@@ -1,0 +1,26 @@
+
+#guncelleButon {
+    background-color: #f4be35;
+    color: #faf3ed;
+    transition: 300ms all;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: none;
+    margin: 5px;
+    padding: 2px;
+    color: aliceblue;
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: 300ms all;
+    margin-top: 10px;
+  }
+  
+  #guncelleButon:hover {
+    background-color: #e7ba8f76;
+    color: #000;
+  }

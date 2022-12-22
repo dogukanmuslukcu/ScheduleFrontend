@@ -1,16 +1,24 @@
-
-<div class="card mb-3" style="max-width: 1000px">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="/src/İmages/UserProfileİmage.jpg" title="title" alt="alt "/>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body" *ngFor="let user of users">
-        <h5 class="card-title">Kullanıcı Bilgisi</h5>
-        <p class="card-text">{{ user.firstName }}</p>
-        <p class="card-text">{{ user.lastName }}</p>
-        <p class="card-text">{{ user.email }}</p>
-        <a routerLink="/user/update" class="btn btn-primary">Güncelle</a>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12-col-lg-12">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-5 col-sm-12 col-lg-5">
+            <img
+              id="userİmg"
+              src="https://www.gezginler.net/indir/resim-grafik/tonic-1363683300.png"
+              alt=""
+            />
+          </div>
+          <div class="col-md-6 col-sm-12 col-lg-6 ml-3">
+            <div class="card-body" *ngFor="let user of users"> 
+            <h5 class="card-title fs-1">Kullanıcı Bilgisi</h5>
+            <p class="card-text fs-4">Ad: {{ user.lastName }}</p>
+            <p class="card-text fs-4">Soyad: {{ user.lastName }}</p>
+            <p class="card-text fs-4">E-Mail: {{ user.email }}</p>
+            <button routerLink="/user/update" class="btn">Güncelle</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

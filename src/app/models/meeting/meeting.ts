@@ -3,20 +3,13 @@ export interface Meeting {
   MeetingName: string;
   HostUser: string;
 
-  FirstVoteTime: string;
-  FirstVotePlace: string;
+  FirstVote: Date;
+  SecondVote: Date;
+  ThirdVote: Date;
+  FourthVote: Date;
+  FifthVote: Date;
+  MeetingDescription:string;
 
-  SecondVoteTime: string;
-  SecondVotePlace: string;
-
-  ThirdVoteTime: string;
-  ThirdVotePlace: string;
-
-  FourthVoteTime: string;
-  FourthVotePlace: string;
-
-  FifthVoteTime: string;
-  FifthVotePlace: string;
 
 
 

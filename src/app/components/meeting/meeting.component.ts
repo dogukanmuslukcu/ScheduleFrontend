@@ -24,29 +24,23 @@ export class MeetingComponent implements OnInit {
   ngOnInit(): void {
     this.isAuthenticated();
     this.createMeetingForm();
+    
    
   }
 
   createMeetingForm() {
     this.meetingForm = this.formBuilder.group({
       MeetingName: ["", Validators.required],
+      MeetingPlace: ["", Validators.required],
       HostUser: [this.userName],
-
-      
-      FirstVotePlace: ["", Validators.required],
-
-      
-      SecondVotePlace: ["", Validators.required],
-
-      
-      ThirdVotePlace: ["", Validators.required],
-      
-      
-      FourthVotePlace: ["", Validators.required],
-      
-     
-      FifthVotePlace: ["", Validators.required]
+      FirstVote: [null, Validators.required],
+      SecondVote: [null, Validators.required],
+      ThirdVote: [null, Validators.required],
+      FourthVote: [null, Validators.required],
+      FifthVote: [undefined],
+      MeetingDescription: ["", Validators.required]
     })
+   
   }
   meeting() {
     if (this.meetingForm.valid) {
@@ -57,6 +51,7 @@ export class MeetingComponent implements OnInit {
         this.toastrService.error(responseError.error)
       })
     }
+    console.log(this.meetingForm)
     
   }
 

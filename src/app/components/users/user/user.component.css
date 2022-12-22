@@ -1,0 +1,19 @@
+button {
+    background-color: #095d48;
+    margin: 5px;
+    padding: 2px;
+    color: aliceblue;
+    border: none;
+    border-radius: 50px;
+    width: 140px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: 300ms all;
+    margin-top: 10px;
+  }
+  button:hover {
+    background-color: rgba(9, 93, 72, 0.5);
+    color: black;
+  }

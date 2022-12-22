@@ -1,46 +1,42 @@
 <div class="content">
   <div class="col-md-12">
-    <div class="card">
-      <div class="card-body">
-        <form [formGroup]="userUpdateForm">
-          <div class="mb-3">
-            <label for="firstName">İsim</label>
-            <div class="form-group">
-              <input
-                type="text"
-                id="firstName"
-                formControlName="firstName"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="lastName">Soy İsim</label>
-            <div class="form-group">
-              <input
-                type="text"
-                id="lastName"
-                formControlName="lastName"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="email">email</label>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                formControlName="email"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <button class="w-100 btn btn-lg btn-success" (click)="update()">
-            Bilgilerimi Güncelle
-          </button>
-        </form>
+    <form [formGroup]="userUpdateForm">
+      <div class="mb-3">
+        <label for="firstName" class="fs-3">Ad</label>
+        <div class="form-group">
+          <input
+            type="text"
+            id="firstName"
+            formControlName="firstName"
+            class="form-control"
+          />
+        </div>
       </div>
-    </div>
+      <div class="mb-3">
+        <label for="lastName" class="fs-3">Soyad</label>
+        <div class="form-group">
+          <input
+            type="text"
+            id="lastName"
+            formControlName="lastName"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="fs-3">E-Mail</label>
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <button class="btn btn-lg" (click)="update()" id="guncelleButon">
+        Bilgilerimi Güncelle
+      </button>
+    </form>
   </div>
 </div>
