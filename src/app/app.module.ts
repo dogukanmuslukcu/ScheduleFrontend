@@ -20,6 +20,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { UserComponent } from './components/users/user/user.component';
 import { UserUpdateComponent } from './components/users/user-update/user-update.component';
 import { MeetingComponent } from './components/meeting/meeting.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MeetingComponent } from './components/meeting/meeting.component';
     RegisterComponent,
     UserComponent,
     UserUpdateComponent,
-    MeetingComponent
+    MeetingComponent,
+    VoteComponent
 
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { MeetingService } from 'src/app/services/meet/meeting.service';
@@ -13,19 +14,30 @@ export class MeetingComponent implements OnInit {
 
   userName:string;
   meetingForm: FormGroup
+ 
+
   constructor(
     private  formBuilder: FormBuilder,
     private  meetingService: MeetingService,
     private  toastrService: ToastrService,
-    private authService: AuthService
+    private authService: AuthService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  
   ) { }
 
   
   ngOnInit(): void {
+
+    this.activatedRoute.params.subscribe(params => {
+    
     this.isAuthenticated();
     this.createMeetingForm();
     
-   
+      
+    })
+
+
   }
 
   createMeetingForm() {
@@ -47,11 +59,15 @@ export class MeetingComponent implements OnInit {
       let meetingModel = Object.assign({},this.meetingForm.value)
       this.meetingService.createMeeting(meetingModel).subscribe(response => {
         this.toastrService.info(response.message)
+        if(response.success)
+        {
+          this.router.navigate(["meetingcreate/vote"])
+        }
       }, responseError => {
         this.toastrService.error(responseError.error)
       })
     }
-    console.log(this.meetingForm)
+   
     
   }
 

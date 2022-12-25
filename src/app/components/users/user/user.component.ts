@@ -1,3 +1,4 @@
+import { ConsoleLogger } from '@angular/compiler-cli';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user/user';
 import { AuthService } from 'src/app/services/auth/auth.service';
@@ -19,6 +20,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.getUserByEmail();
     this.authService.getUserDetailsFromToken();
+    
   }
 
   getUserByEmail() {

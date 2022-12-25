@@ -1,0 +1,12 @@
+
+
+  <tr  *ngFor="let meeting of meetings">
+    <td> {{ meeting.FirstVote }}</td>
+ </tr>
+ <ul>
+  <ng-container *ngFor="let meeting of meetings | keyvalue">
+     <li *ngIf="meeting.key === 'MeetingName' ">
+       <span>{{meeting.value }}</span>
+     </li>
+   </ng-container>
+ </ul>

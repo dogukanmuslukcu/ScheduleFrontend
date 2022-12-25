@@ -11,7 +11,4 @@ export interface Meeting {
   MeetingDescription:string;
 
 
-
-
-
 }
