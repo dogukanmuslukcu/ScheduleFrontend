@@ -21,6 +21,7 @@ import { UserComponent } from './components/users/user/user.component';
 import { UserUpdateComponent } from './components/users/user-update/user-update.component';
 import { MeetingComponent } from './components/meeting/meeting.component';
 import { VoteComponent } from './components/vote/vote.component';
+import { MeetingDtoComponent } from './components/meeting-dto/meeting-dto.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { VoteComponent } from './components/vote/vote.component';
     UserComponent,
     UserUpdateComponent,
     MeetingComponent,
-    VoteComponent
+    VoteComponent,
+    MeetingDtoComponent
 
   ],
   imports: [

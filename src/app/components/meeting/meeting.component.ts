@@ -61,7 +61,7 @@ export class MeetingComponent implements OnInit {
         this.toastrService.info(response.message)
         if(response.success)
         {
-          this.router.navigate(["meetingcreate/vote"])
+          this.router.navigate(["meetingDto"])
         }
       }, responseError => {
         this.toastrService.error(responseError.error)

@@ -1,0 +1,27 @@
+
+<div class="col-md-9">
+    <table class="table">
+      <thead>
+        <tr>
+          <th> Toplantı İsmi </th>
+          <th> Moderatör  </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meetingDto of meetingDtos" class="list-group-item-light">
+          <td>{{ meetingDto.meetingName }}</td>
+          <td>{{ meetingDto.hostUser }}</td>
+          <td>
+            <button
+            routerLink="meetingcreate/vote/{{ meetingDto.meetingId }}"
+              class="btn btn-dark"
+            >
+            Oy Ver
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+

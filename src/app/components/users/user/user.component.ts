@@ -27,5 +27,6 @@ export class UserComponent implements OnInit {
     this.userService.getUserByEmail(this.authService.decodedToken['Email']).subscribe(response => {
       this.users = response.data
     })
+    
   }
 }
