@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:"user/update",component:UserUpdateComponent,canActivate:[LoginGuard]},
   {path:"meetingCreate",component:MeetingComponent,canActivate:[LoginGuard]},
   {path:"meetingDto/meetingcreate/vote/:meetingId",component:VoteComponent,canActivate:[LoginGuard]},
-  {path:"meetingDto",component:MeetingDtoComponent}
+  {path:"meetingDto",component:MeetingDtoComponent,canActivate:[LoginGuard]}
 
 ];
 
