@@ -20,13 +20,11 @@ export class MeetingDtoComponent {
 
   ngOnInit(): void {
     this.getAllMeetingDto();
-    console.log(this.meetingDtos)
     }
 
   getAllMeetingDto(){
     this.meetingDtoService.getAllMeetingDto().subscribe(response => {
       this.meetingDtos = Object.values(response.data)
-      console.log(this.meetingDtos)
     })
   }
 

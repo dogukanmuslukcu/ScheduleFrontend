@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { MeetingService } from 'src/app/services/meet/meeting.service';
+import { VoteService } from 'src/app/services/vote/vote.service';
 
 @Component({
   selector: 'app-meeting',
@@ -14,6 +15,7 @@ export class MeetingComponent implements OnInit {
 
   userName:string;
   meetingForm: FormGroup
+  voteForm:FormGroup
  
 
   constructor(
@@ -22,22 +24,16 @@ export class MeetingComponent implements OnInit {
     private  toastrService: ToastrService,
     private authService: AuthService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
-  
+    private router: Router,
+    private voteService:VoteService
   ) { }
 
   
   ngOnInit(): void {
-
-    this.activatedRoute.params.subscribe(params => {
-    
     this.isAuthenticated();
     this.createMeetingForm();
-    
-      
-    })
-
-
+    this.createVoteForm();
+    console.log(this.voteForm);
   }
 
   createMeetingForm() {
@@ -80,4 +76,25 @@ export class MeetingComponent implements OnInit {
     }
   } 
 
+  voteCreate()
+  {
+    if (this.voteForm.valid) {
+      let voteModel = Object.assign({},this.voteForm.value)
+      this.voteService.createVote(voteModel).subscribe(response => {
+        this.toastrService.info(response.message)
+      }, responseError => {
+        this.toastrService.error(responseError.error)
+      })
+    }
+  }
+
+  createVoteForm() {
+    this.voteForm = this.formBuilder.group({
+      VoteOneCount: [0],
+      VoteTwoCount: [0],
+      VoteThreeCount: [0],
+      VoteFourCount: [0],
+      VoteFiveCount: [0]
+    })
+  }
 }

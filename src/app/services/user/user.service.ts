@@ -22,4 +22,6 @@ export class UserService {
   userUpdate(user:User){
     return this.httpClient.post<ResponseModel>(this.apiUrl+"update",user)
   }
+  
+  
 }

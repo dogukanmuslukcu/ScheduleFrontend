@@ -1,0 +1,54 @@
+button {
+    margin-right: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #095d48;
+    color: aliceblue;
+    transition: 300ms all;
+    float: right;
+  }
+  button:hover {
+    background-color: rgba(11, 94, 72, 0.4);
+    color: black;
+  }
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #wrapper {
+    position: relative;
+    height: auto;
+    background: #215f00; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      rgb(250, 245, 239),
+      #72826a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      rgb(250, 245, 239),
+      #72826a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .custom-shape-divider-top-1672501841 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 23px;
+  }
+  path {
+    fill: #fff;
+  }

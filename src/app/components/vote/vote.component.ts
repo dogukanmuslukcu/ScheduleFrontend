@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Meeting } from 'src/app/models/meeting/meeting';
 import { User } from 'src/app/models/user/user';
+import { Vote } from 'src/app/models/vote/vote';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { MeetingService } from 'src/app/services/meet/meeting.service';
 import { UserService } from 'src/app/services/user/user.service';
+import { VoteService } from 'src/app/services/vote/vote.service';
 
 
 @Component({
@@ -22,7 +25,9 @@ export class VoteComponent {
   thirdvote:any
   fourtvote:any
   fifthvote:any
-  a:string="abcd"
+  vote:Vote
+
+ 
 
 
 
@@ -30,6 +35,8 @@ export class VoteComponent {
   constructor(
     private meetingService: MeetingService,
     private activatedRoute: ActivatedRoute,
+    private voteService :VoteService,
+    private  toastrService: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -57,12 +64,68 @@ export class VoteComponent {
   
   fnClick()
   {
-    {
-      this.afk();
-    }
-  }
-  afk()
+  if(this.data.gen ==1)
   {
-    console.log("Çalıştı")
+    this.voteOne();
   }
+  if(this.data.gen ==2)
+  {
+    this.voteTwo();
+  }
+  if(this.data.gen ==3)
+  {
+    this.voteThree();
+  }
+  if(this.data.gen ==4)
+  {
+    this.voteFour();
+  }
+  if(this.data.gen ==5)
+  {
+    this.voteFive();
+  }
+
+  }
+  
+  voteOne()
+  {
+    this.voteService.voteOne(this.vote).subscribe(response => {
+      this.toastrService.info(response.message)
+    }, responseError => {
+      this.toastrService.error(responseError.error)
+    })
+  }
+  voteTwo()
+  {
+    this.voteService.voteTwo(this.vote).subscribe(response => {
+      this.toastrService.info(response.message)
+    }, responseError => {
+      this.toastrService.error(responseError.error)
+    })
+  }
+  voteThree()
+  {
+    this.voteService.voteThree(this.vote).subscribe(response => {
+      this.toastrService.info(response.message)
+    }, responseError => {
+      this.toastrService.error(responseError.error)
+    })
+  }
+  voteFour()
+  {
+    this.voteService.voteFour(this.vote).subscribe(response => {
+      this.toastrService.info(response.message)
+    }, responseError => {
+      this.toastrService.error(responseError.error)
+    })
+  }
+  voteFive()
+  {
+    this.voteService.voteFive(this.vote).subscribe(response => {
+      this.toastrService.info(response.message)
+    }, responseError => {
+      this.toastrService.error(responseError.error)
+    })
+  }
+
 }

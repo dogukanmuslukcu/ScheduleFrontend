@@ -39,12 +39,10 @@
               </div>
             </div>
 
-            <div class="col-sm-12 col-md-12 col-lg-12 mb-3 mt-5">
+            <div class="col-sm-12 col-md-12 col-lg-12 mb-3 mt-3">
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <label for="FirstVote" class="mb-2 fs-5"
-                    >Toplantı 1</label
-                  >
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <label for="FirstVote" class="mb-2 fs-5">Toplantı 1</label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
@@ -54,11 +52,8 @@
                     />
                   </div>
                 </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <label for="SecondVote" class="mb-2 fs-5"
-                    >Toplantı 2
-                  </label>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <label for="SecondVote" class="mb-2 fs-5">Toplantı 2 </label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
@@ -68,11 +63,8 @@
                     />
                   </div>
                 </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <label for="ThirdVote" class="mb-2 fs-5"
-                    >Toplantı 3
-                  </label>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <label for="ThirdVote" class="mb-2 fs-5">Toplantı 3 </label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
@@ -82,14 +74,8 @@
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-6 col-lg-4 mt-2">
-                  <label for="FourthVote" class="mb-2 fs-5"
-                    >Toplantı 4</label
-                  >
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <label for="FourthVote" class="mb-2 fs-5">Toplantı 4</label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
@@ -99,10 +85,8 @@
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 mt-2">
-                  <label for="FifthVote" class="mb-2 fs-5"
-                    >Toplantı 5
-                  </label>
+                <div class="col-sm-12 col-md-12 col-lg-12 mb-2">
+                  <label for="FifthVote" class="mb-2 fs-5">Toplantı 5 </label>
                   <div class="form-floating mb-2">
                     <input
                       type="datetime-local"
@@ -114,8 +98,13 @@
                 </div>
               </div>
             </div>
-           <div class="col-sm-12 col-md-12 col-lg-12">
-              <label for="MeetingDescription" class="mb-2 fs-4">Toplantı açıklaması</label>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="row justify-content-center"></div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <label for="MeetingDescription" class="mb-2 fs-4"
+                >Toplantı açıklaması</label
+              >
               <div class="form-floating mb-2">
                 <input
                   type="text"
@@ -129,6 +118,7 @@
               type="button"
               class="btn btn-outline-success btn-lg mt-5"
               (click)="meeting()"
+              (click)="voteCreate()"
             >
               Toplantı Oluştur
             </button>
